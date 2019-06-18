@@ -13,6 +13,10 @@ public class Board {
 
         this.board[0][0] = 'H';
         this.board[9][9] = 'M';
+        this.board[2][2] = 'T';
+        this.board[7][2] = 'T';
+        this.board[2][7] = 'T';
+        this.board[7][7] = 'T';
     }
 
     public void printBoard() {
