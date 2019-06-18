@@ -84,7 +84,7 @@ public class Main {
     }
 
     public static void getMonsterMove() {
-        int check = monster.getMove() % 3;
+        int check = monster.getMove() % 2;
         switch (check) {
             case 0:
                 if (hero.getiPos() < monster.getiPos()) {
