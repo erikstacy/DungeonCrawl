@@ -5,6 +5,7 @@ public class Main {
     static Scanner input = new Scanner(System.in);
     static Board board = new Board();
     static Hero hero = new Hero();
+    static Monster monster = new Monster();
     static char quit = 'n';
 
     public static void main(String[] args) {
@@ -12,6 +13,8 @@ public class Main {
         while (quit == 'n') {
             board.printBoard();
             userInput();
+            getMonsterMove();
+            checkEndGame();
         }
     }
 
@@ -19,7 +22,7 @@ public class Main {
         System.out.println("\n" + "Welcome to D U N G E O N    C R A W L \n");
     }
 
-    public static char userInput() {
+    public static void userInput() {
         System.out.println("Move your hero");
         System.out.println("W moves up. A moves left. S moves down. D moves right.\n");
         System.out.println("Q quits the game");
@@ -54,6 +57,46 @@ public class Main {
         }
     }
 
+    public static void getMonsterMove() {
+        int check = monster.getMove() % 3;
+        switch (check) {
+            case 0:
+                if (hero.getiPos() < monster.getiPos()) {
+                    if (checkMove(monster.getiPos() - 1, monster.getjPos()) == 'y') {
+                        moveMonster(monster.getiPos() - 1, monster.getjPos());
+                    }
+                } else {
+                    if (checkMove(monster.getiPos() + 1, monster.getjPos()) == 'y') {
+                        moveMonster(monster.getiPos() + 1, monster.getjPos());
+                    }
+                }
+                break;
+            case 1:
+                if (hero.getjPos() < monster.getjPos()) {
+                    if (checkMove(monster.getiPos(), monster.getjPos() - 1) == 'y') {
+                        moveMonster(monster.getiPos(), monster.getjPos() - 1);
+                    }
+                } else {
+                    if (checkMove(monster.getiPos(), monster.getjPos() + 1) == 'y') {
+                        moveMonster(monster.getiPos(), monster.getjPos() + 1);
+                    }
+                }
+                break;
+            case 2:
+                if (hero.getiPos() < monster.getiPos()) {
+                    if (checkMove(monster.getiPos() + 1, monster.getjPos()) == 'y') {
+                        moveMonster(monster.getiPos() + 1, monster.getjPos());
+                    }
+                } else {
+                    if (checkMove(monster.getiPos() - 1, monster.getjPos()) == 'y') {
+                        moveMonster(monster.getiPos() - 1, monster.getjPos());
+                    }
+                }
+                break;
+        }
+        monster.setMove(monster.getMove() + 1);
+    }
+
     public static char checkMove(int i, int j) {
         if (i < 0 || i > 9 || j < 0 || j > 9) {
             return 'n';
@@ -67,6 +110,19 @@ public class Main {
         hero.setiPos(i);
         hero.setjPos(j);
         board.changeBoard(i, j, 'H');
+    }
+
+    public static void moveMonster(int i, int j) {
+        board.changeBoard(monster.getiPos(), monster.getjPos(), '-');
+        monster.setiPos(i);
+        monster.setjPos(j);
+        board.changeBoard(i, j, 'M');
+    }
+
+    public static void checkEndGame() {
+        if (hero.getiPos() == monster.getiPos() && hero.getjPos() == monster.getjPos()) {
+            System.out.println("You LOST");
+        }
     }
 
 }
