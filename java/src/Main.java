@@ -16,6 +16,7 @@ public class Main {
             getMonsterMove();
             checkEndGame();
         }
+        board.printBoard();
         if (endGame == 'w') {
             System.out.println("You WON!!");
         }
@@ -133,7 +134,11 @@ public class Main {
 
     public static char checkTreasure(int i, int j) {
         if ((i == 2 && j ==2) || (i == 2 && j == 7) || (i == 7 && j == 2) || (i == 7 && j == 7)) {
-            return 'y';
+            if (board.printSpot(i, j) == 'T') {
+                return 'y';
+            } else {
+                return 'n';
+            }
         } else {
             return 'n';
         }

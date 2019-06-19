@@ -17,9 +17,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="45">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
               <folding>
+                <element signature="e#687#688#0" expanded="true" />
                 <element signature="e#772#773#0" expanded="true" />
               </folding>
             </state>
@@ -60,7 +61,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -78,6 +78,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -130,7 +131,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15261473" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15421557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -138,7 +139,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5016112" side_tool="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Messages" order="3" sideWeight="0.49838883" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="4" />
@@ -193,9 +194,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="45">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
           <folding>
+            <element signature="e#687#688#0" expanded="true" />
             <element signature="e#772#773#0" expanded="true" />
           </folding>
         </state>

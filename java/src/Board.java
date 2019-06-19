@@ -33,4 +33,8 @@ public class Board {
         this.board[i][j] = character;
     }
 
+    public char printSpot(int i, int j) {
+        return board[i][j];
+    }
+
 }
